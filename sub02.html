@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J-QUERY 웹사이트 적용</title>
+    <link rel="stylesheet" href="./css/header footer.css">
+    <link rel="stylesheet" href="./css/sub01.css">
+  
+    <!--  <link rel="stylesheet" href="./css/swiper.min.css"> -->
+    <script src="./js/government Jquery.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <!-- 구글맵/유료 사용하도록 하는 기능. 구글맵 API할용하기 -->
+    <script src="js/map.js"></script>
+    <style>
+        header {
+            z-index: 9999;
+            position: fixed;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        #mapPosition {
+            width: 1400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        h3 {
+            z-index: 51;
+            position: relative;
+
+            margin-top: 200px;
+            text-align: center;
+            width: 100%;
+            height: 100px;
+            background-color: rgb(255, 255, 255);
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        #map_wrap {
+            margin-top: 200px;
+            text-align: center;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            z-index: 0;
+        }
+
+        #map {
+            margin-top: 30px;
+            width: 700px;
+            height: 550px;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            margin: 0 auto;
+        }
+
+        #mapPosition>div,
+        #mapPosition>iframe {
+            margin: 10px;
+
+
+        #bannerWrap ul ul {
+            /* 서브메뉴 내려오는부분 */
+            position: absolute;
+            display: none;
+            top: 34px;
+            width: 90px;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0);
+            z-index: 55;
+            border: 1px solid black;
+            text-decoration: none;
+        }
+
+        #bannerWrap ul ul a {
+            display: block;
+            padding: 0;
+            width: 100%;
+            font-weight: bold;
+            text-align: center;
+            color: rgb(255, 5, 5);
+            background-color: rgb(255, 255, 255);
+            line-height: 2.5;
+            font-size: 15px;
+            text-decoration: none;
+            }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="section0">
+            <div id="banner0">
+                <div id="bannerWrap">
+                    <div id="logowrap">
+                        <a href="./index.html">
+                            <img src="./images/main_img/logo.png" style="width: 190px; height: 70px;" alt="logo">
+                        </a>
+                    </div>
+                    <ul> <!-- 메인 메뉴  -->
+                        <li>
+                            <a href="">핵심기술</a>
+                            <ul>
+                                <li><a href="">AI-OCR</a></li>
+                                <li><a href="">개인정보</a></li>
+                                <li><a href="">비식별</a></li>
+                                <li><a href="">AI-NER</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">제품소개</a>
+                            <ul>
+                                <li><a href="">안녕하세요 </a></li>
+                                <li><a href="">이건 제가 임의로 넣은 </a></li>
+                                <li><a href="">비식별</a></li>
+                                <li><a hreBf="">제품소개</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">제품구매</a>
+                            <ul>
+                                <li><a href="">소금빵 </a></li>
+                                <li><a href="">바질빵</a></li>
+                                <li><a href="">브라우니</a></li>
+                                <li><a href="">밀크티 </a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">고객지원</a>
+                            <ul>
+                                <li><a href="">AI-OCR</a></li>
+                                <li><a href="">개인정호</a></li>
+                                <li><a href="">비식별</a></li>
+                                <li><a href="">AI-NER</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">JD이야기</a>
+                            <ul>
+                                <li><a href="">AI-OCR</a></li>
+                                <li><a href="">개인정보</a></li>
+                                <li><a href="">비식별</a></li>
+                                <li><a href="">AI-NER</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div id="hamburgerarea">
+                    <p>더보기</p>
+                    <div id="menu_open">
+                        <div class="menu_btn_line1"></div>
+                        <div class="menu_btn_line2"></div>
+                        <div class="menu_btn_line3"></div>
+                    </div>
+                    <script>
+                        document.getElementById('hamburgerarea').addEventListener('click', function () {
+                            window.location.href = 'http://www.naver.com';
+                        });
+                    </script>
+                </div>
+                <div class="pop">
+                    <div class="popWrap">
+                        <img src="./images/main_img/popimage.PNG" alt="팝업">
+                        <button> X </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="mapPosition">
+        <div id="map_wrap">
+            <h3>대천 해수욕장 오피스 찾아오시는 길</h3>
+
+            <div id="map-canvas" title="찾아오는 길"></div>
+
+            <!-- 구글지도>주소입력>공유>지도퍼가기>html복사 -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12726.250381023186!2d126.66702350762834!3d37.11552825268121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b08a3b654c709%3A0xe9e1988daabf5224!2z6raB7Y-J7ZWt7ISg7LCp7J6l!5e0!3m2!1sko!2skr!4v1717047536012!5m2!1sko!2skr"
+                width="700" height="550" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <!-- 카카오지도 -->
+            <!--     https://map.kakao.com/ 에서 더 휴먼 검색 > 지도 아이콘 클릭> html태그 복사 > 소스 생성하기 > -->
+            <div id="map" style="width:700px;height:550px;"></div>
+            <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3120c84ff8d16caa6ac8ff2449c13bd8
+			"></script>
+
+            <script>
+                var container = document.getElementById('map');
+                var options = {
+                    center: new kakao.maps.LatLng(37.1124787, 126.6852332),
+                    level: 3
+                };
+                var map = new kakao.maps.Map(container, options);
+            </script>
+        </div>
+    </div>
+    <footer>
+        <div id="footerwrap">
+            <div id="logoflip">
+                <div class="logowrap2 front">
+                    <a href="https://www.mcst.go.kr/kor/main.jsp"><img src="./images/main_img/logo2.png" width="230px"
+                            height="80px" alt="logo2"></a>
+                </div>
+
+            </div>
+            <div id="footerwrap2">
+                <ul>
+                    <li><a href="https://www.mcst.go.kr/kor/main.jsp">개인정보처리방침</a></li>
+                    <li><a href="#">행정 서비스 현장</a></li>
+                    <li><a href="#">저작권 정책 누리집</a></li>
+                    <li><a href="#">이용 안내 누리집</a></li>
+                    <li><a href="#">개선 의견 읽기</a></li>
+                </ul>
+                <div id="textwrap">
+                    <p>30119 세종특별자치시 갈매로 388 정부세종청사 15동
+                        대표전화: 044-203-2000(월~금 09:00~18:00, 공휴일 제외, 유료) 팩스: 044-203-3447
+                        Copyright ⓒ Ministry of Culture, Sports and Tourism
+                    </p>
+                </div>
+            </div>
+            <div id="logowrap3">
+                <ul>
+                    <li> <a href="https://www.mois.go.kr/chd/sub/a05/country/screen.do"><img
+                                src="./images/main_img/korea.PNG" alt="logo2"></a></li>
+                    <li><a href="https://foryou.better.go.kr/base/main/view"><img src="./images/main_img/korea2.PNG"
+                                alt="logo2"></a></li>
+                    <li><a href="https://www.msit.go.kr/index.do"><img src="./images/main_img/korea3.png"
+                                alt="logo2"></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>

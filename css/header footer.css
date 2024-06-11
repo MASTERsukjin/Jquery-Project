@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+h1 {
+    width: 200px;
+    height: 80px;
+    background-color: #ffffff;
+}
+
+#menu_open,
+#menu_close {
+    position: absolute;
+    top: 80px;
+    left: 92.5%;
+    width: 40px;
+    height: 50px;
+    cursor: pointer;
+    color: black;
+}
+
+.menu_btn_line1 {
+    width: 30px;
+    height: 3px;
+    background: #ff9d00;
+    transition: all 0.5s;
+    transform: rotate(0deg);
+    display: block;
+    margin: 6px 0;
+}
+
+.menu_btn_line2 {
+    width: 20px;
+    height: 3px;
+    background: #ff9d00;
+    transition: all 0.5s;
+    transform: rotate(0deg);
+    display: block;
+    margin: 6px 0;
+    margin-left: 20%;
+}
+
+.menu_btn_line3 {
+    width: 30px;
+    height: 3px;
+    background: #ff9d00;
+    transition: all 0.5s;
+    transform: rotate(0deg);
+    display: block;
+    margin: 6px 0;
+}
+
+#hamburgerarea {
+    padding-right: 100px;
+    padding-top: 20px;
+    background-color: rgb(255, 255, 255);
+    width: 100px;
+    height: 80px;
+    float: right;
+}
+
+#hamburgerarea p {
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    width: 70px;
+    padding-right: 5px;
+    float: right;
+}
+
+/* 팝업관련 */
+.pop {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    display: none;
+    cursor: pointer;
+}
+
+.pop .popWrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pop .popWrap img {
+    width: 100%;
+    height: 100%;
+}
+
+.pop .popWrap button {
+    padding: 10px 15px;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 15px;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    cursor: pointer;
+}
+
+body,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: block;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+#section0 {
+    /* 전체영역  */
+    width: 100%;
+    height: 150px;
+}
+
+.buttoncontainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+#banner0 {
+    /* 내부 영역 */
+    margin: 0 auto;
+    padding-top: 60px;
+    box-sizing: border-box;
+    width: 1200px;
+    height: 100px;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+#banner0>ul {
+    width: 790px;
+    height: 154px;
+    margin: 0 auto;
+}
+
+#bannerWrap {
+    width: 1000px;
+    height: 80px;
+    float: left;
+}
+
+#bannerWrap>ul {
+    /* 메인메뉴부분  */
+    margin-left: 90px;
+    margin-top: 5px;
+}
+
+#bannerWrap>ul>li {
+    /* 메인 메뉴 안에 리스트  */
+    float: left;
+    margin: 15px;
+    position: relative;
+}
+
+#bannerWrap>ul>li>a {
+    /* 메인 메뉴 글씨  */
+    display: block;
+    color: grey;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#bannerWrap ul ul {
+    /* 서브메뉴 내려오는부분 */
+    /* 서브메뉴 ABSOLUTE */
+    z-index: 50;
+    display: none;
+    position: absolute;
+    top: 34px;
+    width: 90px;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.188);
+    border: 1px solid black;
+    text-decoration: none;
+}
+
+#bannerWrap ul ul a {
+    display: block;
+    padding: 0;
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    line-height: 2.5;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+/* 메뉴 보이게 */
+#bannerWrap>ul>li:hover ul {
+    display: block;
+}
+
+/* 메인 메뉴밑 강조  */
+#bannerWrap ul a:hover {
+    border-bottom: 4px solid orange;
+}
+
+#logowrap {
+    margin-top: 0px;
+    width: 200px;
+    height: 80px;
+    background-color: hsl(0, 0%, 100%);
+    float: left;
+}
+
+#bannerWrap {
+    background-color: rgb(255, 255, 255);
+    float: left;
+}
+
+#bannerWrap>ul {
+    width: 600px;
+    height: 50px;
+    /*  overflow: hidden;      */
+    transition: height 0.3s;
+    display: inline-block;
+}
+
+#bannerWrap>ul>ul {
+    width: 100px;
+    height: 300px;
+}
+
+#bannerWrap>ul:hover {
+    height: 200px;
+
+}
+
+#banner {
+    padding-top: 10px;
+    padding-left: 30px;
+    width: 900px;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    text-align: center;
+}
+
+#profilewrap {
+    width: 152px;
+    height: 50px;
+    float: right;
+}
+
+#banner>a {
+    text-decoration: none;
+    margin: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+}
+
+footer {
+    clear: both;
+    width: 1280px;
+    height: 250px;
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto;
+    position: relative;
+}
+
+#logoflip {
+    position: relative;
+    width: 230px;
+    height: 80px;
+}
+
+.logowrap2 {
+    position: absolute;
+    z-index: 5;
+    width: 230px;
+    height: 80px;
+    left: 50%;
+    top: 50%;
+    margin: -40px 0 0 -115px;
+
+}
+
+.logowrap2 img {
+    width: 230px;
+    height: 80px;
+    border-radius: 30px;
+
+}
+
+.logowrap2flipped {
+    position: absolute;
+    z-index: 5;
+    width: 230px;
+    height: 80px;
+    left: 50%;
+    top: 0;
+    margin: -40px 0 0 -115px;
+
+
+}
+
+.logowrap2flipped img {
+    width: 230px;
+    height: 80px;
+    border-radius: 30px;
+
+}
+
+footer #footerwrap #logowrap2 {
+    float: left;
+}
+
+footer #footerwrap {
+    padding: 50px;
+    height: 140px;
+    width: 1200px;
+}
+
+footer #footerwrap #footerwrap2 {
+    height: 150px;
+    width: 800px;
+    float: left;
+}
+
+#footerwrap2 ul {
+    padding-top: 10px;
+    margin-left: 100px;
+}
+
+#footerwrap ul li {
+    float: left;
+    margin: 10px;
+}
+
+#footerwrap ul li:first-child a {
+    color: rgba(255, 0, 0, 0.696);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#footerwrap ul li a {
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.765);
+    text-decoration: none;
+    font-size: 15px;
+}
+
+#footerwrap ul li a:hover {
+    color: #ff8812e2;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+#footerwrap2 #textwrap {
+    clear: both;
+    margin-left: 110px;
+    font-size: 14px;
+}
+
+#logowrap3 ul {
+    clear: both;
+    float: right;
+}
+
+#buttonwrap {
+    width: 1280px;
+    background: blue;
+    float: left;
+}
+

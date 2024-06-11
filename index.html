@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J-QUERY 웹사이트 적용</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="css/weather-icons.min.css">
+
+    <!--   swiper  -->
+    <script src="http://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <!--  --------- -->
+    <script src="./js/weather.js"></script>
+    <script src="./js/jquery.flip.min.js"></script>
+    
+    <script src="./js/government Jquery.js"></script>
+
+    <script>
+        $(function () {
+            $('#logoflip').flip({
+                axis: '', //중심축
+                reverse: true,//전환
+                trigger: 'hover'//마우스가 올려졌을 때
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <header>
+        <div id="section0">
+            <div id="banner0">
+                <div id="bannerWrap">
+                    <div id="logowrap">
+                        <a href="./index.html">
+                            <img src="./images/main_img/logo.png" style="width: 190px; height: 70px;" alt="logo">
+                        </a>
+                    </div>
+                    <ul> <!-- 메인 메뉴  -->
+                        <li>
+                            <a href="">핵심기술</a>
+                            <ul>
+                                <li><a href="">AI-OCR</a></li>
+                                <li><a href="">개인정보</a></li>
+                                <li><a href="">비식별</a></li>
+                                <li><a href="">AI-NER</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">제품소개</a>
+                            <ul>
+                                <li><a href="">안녕하세요 </a></li>
+                                <li><a href="">이건 제가 임의로 넣은 </a></li>
+                                <li><a href="">비식별</a></li>
+                                <li><a hreBf="">제품소개</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">제품구매</a>
+                            <ul>
+                                <li><a href="">소금빵 </a></li>
+                                <li><a href="">바질빵</a></li>
+                                <li><a href="">브라우니</a></li>
+                                <li><a href="">밀크티 </a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">고객지원</a>
+                            <ul>
+                                <li><a href="">AI-OCR</a></li>
+                                <li><a href="">개인정호</a></li>
+                                <li><a href="">비식별</a></li>
+                                <li><a href="">AI-NER</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">JD이야기</a>
+                            <ul>
+                                <li><a href="">AI-OCR</a></li>
+                                <li><a href="">개인정보</a></li>
+                                <li><a href="">비식별</a></li>
+                                <li><a href="">AI-NER</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div id="hamburgerarea">
+                    <p>회사소개</p>
+                    <div id="menu_open">
+                        <div class="menu_btn_line1"></div>
+                        <div class="menu_btn_line2"></div>
+                        <div class="menu_btn_line3"></div>
+                    </div>
+                </div>
+                <div class="pop">
+                    <div class="popWrap">
+                        <img src="./images/main_img/popimage.PNG" alt="팝업">
+                        <button> X </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+<div id="section1">
+    <div id="banner1">
+        <div class="slide_stopwrap">
+            <div class="slide_stop">
+                <ul>
+                    <li class="sd_stop"><a
+                            href="#"><!-- <img src="./images/slide_stop.png" width="15px"; height="5px";> -->stop</a>
+                    </li>
+                    <li class="sd_start"><a
+                            href="#"><!-- <img src="./images/slide_play.png" width="15px"; height="5px";> -->play</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="boxes">
+            <div class="box1">
+                <!--  <a href="https://www.figma.com/files/recents-and-sharing?fuid=1365227674559832189"><img
+                            src="./images/edu.png" alt="edu" style="width:545px;height: 280px;"></a> -->
+                <div class="swiper-container swiper1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="./images/main_img/edu.png"
+                                style="width:545px; height:280px;" alt="edu">Slide 1</div>
+                        <div class="swiper-slide"><img src="./images/main_img/rotate1.png"
+                                style="width:545px; height:280px;" alt="edu">Slide 2</div>
+                        <div class="swiper-slide"><img src="./images/main_img/rotate2.png"
+                                style="width:545px; height:280px;" alt="edu">Slide 3</div>
+                    </div>
+                </div>
+                <div class="paginationdesign">
+                    <div class="swiper-pagination swiper-pagination1"></div>
+                    <div class="swiper-button-next next1"></div>
+                    <div class="swiper-button-prev prev1"></div>
+                </div>
+            </div>
+            <script>
+                var swiper1 = new Swiper('.swiper1', {
+                    spaceBetween: 0, // 슬라이드간 간격
+                    loop: true,    // 무한 반복
+                    pagination: {   // 페이징    
+                        el: '.swiper-pagination1',
+                        clickable: true,  // 페이징을 클릭하면 해당 영역으로 이동, 필요시 지정해 줘야 기능 작동
+                    },
+                    autoplay: {    //배너가 머물러 있는 시간 
+                        delay: 2500,
+                    },
+                    navigation: {   // 네비게이션
+                        nextEl: '.next1',   // 다음 버튼 클래스명
+                        prevEl: '.prev1',   // 이전 버튼 클래스명
+                    },
+                });
+            </script>
+            <div class="box2">
+                <a href="../관공서 JQUERY/sub01.html"><img src="./images/main_img/edu2.png" alt="edu"
+                        style="width:545px;height: 280px;"></a>
+            </div>
+            </boxes>
+        </div>
+    </div>
+</div>
+<div id="section2">
+    <div id="banner2">
+        <div class="boxes2">
+            <div class="category">
+                <input checked id="one" name="tabs" type="radio" />
+                <label for="one">알림 ·</label>
+
+                <input id="two" name="tabs" type="radio" value="Two" />
+                <label for="two">채용 ·</label>
+
+                <input id="three" name="tabs" type="radio" />
+                <label for="three">입찰</label>
+                <a class="morepop" href="#"><img src="./images/main_img/more.png" alt="more"></a>
+
+                <!-- MORE POP UP 눌렀을때 나오는  -->
+                <div class="buttonarea">
+
+                    <div class="notice">
+                        <img src="./images/main_img/1713940265937.jpg" width="100%" height="100%" alt="팝업2">
+                    </div>
+
+                    <div id="close"><button> X </button></div>
+                </div>
+
+
+
+                <div class="panels">
+                    <div class="contents">
+                        <ul>
+                            <li><span>2012.05.16</span><a href="#"> 국가는 전통문화의 계승·발전과 민족문화의 노력하여야 한다</a></li>
+                            <li><span>2012.05.16</span><a href="#"> 경제적 방법으로 근로자의 고용의 증진과 적정임금의 보장에 </a></li>
+                            <li><span>2012.05.16</span><a href="#"> 국가는 전통문화의 계승·발전과 민족문화의 창달에 노력하여</a></li>
+                            <li><span>2012.05.16></span><a href="#"> 법률이 정하는 바에 의하여 최저임금제를 시행하여야</a></li>
+                            <li><span>2012.05.16></span><a href="#"> 국가는 전통문화의 계승·발전과 민족문화의 창달에 노력</a></li>
+                        </ul>
+                    </div>
+                    <div class="contents1">
+                        <p>해당 내용들은 내가 채용을 눌렀을때 나오는 탭 하위 내용들입니다 탭메뉴 만들기 연습 헌법재판소의 조직과 운영 기타 필요한 사항은 법률로 정한다. 모든
+                            국민은
+                            근로의 권리를 가진다. <br> 국가는 사회적·경제적 방법으로 근로자의 고용의 증진과 적정임금의 보장에 노력하여야 하며, <br> 법률이 정하는 바에
+                            의하여
+                            최저임금제를 시행하여야 한다. </p>
+                    </div>
+                    <div class="contents2">
+                        <p>해당 내용들은 입찰을 눌렀을때 나오는 탭 하위 내용들입니다 <br>하하 헌법재판소의 조직과 운영 기타 필요한 사항은 법률로 정한다. 모든 국민은 근로의
+                            권리를
+                            가진다. 국가는 사회적·경제적 방법으로<br> 근로자의 고용의 증진과 적정임금의 보장에 노력하여야 하며, 법률이 정하는 바에 의하여 최저임금제를
+                            시행하여야
+                            한다. </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            </boxes2>
+        </div>
+        <div class="boxes3">
+            <div class="category2">
+                <ul>
+                    <li><a href="">*보도자료 ·</a></li>
+                    <li class="grey"><a href="./sub02.html">찾아가는 길</a></li>
+                </ul>
+                <div class="ads">
+                    <li><a href="#">외국인 관광객 여러분 진심으로 환영합니다 </a></li>
+                    <li><a href="#">조선왕실 문화부터 제주 해녀의 삶까지 </a></li>
+                    <li><a href="#">울산에서 운동회 2024 체육대회</a></li>
+                    <li><a href="#">늘봄학교에서 활동하는 이야기 f할머니를 만나다</a></li>
+                </div>
+            </div>
+            <!--   <div id="box1"><input type="button" id="btnDown" value="scrollDown" /></div> -->
+        </div>
+    </div>
+</div>
+<div id="newbannerwrap">
+    <div id="newbanner">
+        <div class="box7"><img src="./images/main_img/alio.png" alt="BAN" style=" width: 1200px; height: 150px;"></div>
+        <div class="box8"><img src="./images/main_img/banner2.jfif" alt="BAN" style=" width: 1200px; height: 150px;">
+        </div>
+        <div class="box9"><img src="./images/main_img/bannerpic3.PNG" alt="BAN" style=" width: 1200px; height: 150px;">
+        </div>
+    </div>
+</div>
+<div id="section3">
+    <div id="banner3">
+        <div class="container">
+            <div class="box4">
+                <a href="#"> <img src="./images/main_img/this.png" style="width:545px; height:280px;" alt="this"></a>
+            </div>
+            <div class="box5">
+                <a href="#"> <img src="./images/main_img/that.jpg" style="width:545px; height:280px;" alt="that"></a>
+            </div>
+            <div class="box6">
+                <a href="#"> <img src="./images/main_img/here.png" style="width:545px; height:280px;" alt="here"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div id="footerwrap">
+        <div id="logoflip">
+            <div class="logowrap2 front">
+                <a href="https://www.mcst.go.kr/kor/main.jsp"><img src="./images/main_img/logo2.png" width="230px"
+                        height="80px" alt="logo2"></a>
+            </div>
+            <div class="logowrap2flipped back">
+                <a href="https://www.mcst.go.kr/kor/main.jsp"><img src="./images/main_img/logo.png" width="230px"
+                        height="80px" alt="logowrap2flipped"></a>
+            </div>
+        </div>
+        <div id="footerwrap2">
+            <ul>
+                <li><a href="https://www.mcst.go.kr/kor/main.jsp">개인정보처리방침</a></li>
+                <li><a href="#">행정 서비스 현장</a></li>
+                <li><a href="#">저작권 정책 누리집</a></li>
+                <li><a href="#">이용 안내 누리집</a></li>
+                <li><a href="#">개선 의견 읽기</a></li>
+            </ul>
+            <div id="textwrap">
+                <p>30119 세종특별자치시 갈매로 388 정부세종청사 15동
+                    대표전화: 044-203-2000(월~금 09:00~18:00, 공휴일 제외, 유료) 팩스: 044-203-3447
+                    Copyright ⓒ Ministry of Culture, Sports and Tourism
+                </p>
+            </div>
+        </div>
+
+        <div class="api">
+            <div class="api_wrap">
+                <div class="cicon"></div>
+                <div class="temp_info">
+                    <div class="date"></div>
+                    <div class="cname"></div> <!-- 도시이름 -->
+                    <div class="ctemp">현재 온도 : </div>
+                    <div class="chightemp">최고 온도 : </div>
+                    <div class="clowtemp">최저 온도 : </div>
+                    <div class="humidity">습도 : </div>
+                    <div class="wind">풍속 : </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="logowrap3">
+            <ul>
+                <li> <a href="https://www.mois.go.kr/chd/sub/a05/country/screen.do"><img
+                            src="./images/main_img/korea.PNG" alt="logo2"></a></li>
+                <li><a href="https://foryou.better.go.kr/base/main/view"><img src="./images/main_img/korea2.PNG"
+                            alt="logo2"></a></li>
+                <li><a href="https://www.msit.go.kr/index.do"><img src="./images/main_img/korea3.png" alt="logo2"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</body>

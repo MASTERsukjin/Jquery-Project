@@ -1,0 +1,963 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.morepop {
+    padding: 5px;
+    float: right;
+}
+
+/* 팝업되는 전체 영역  */
+.buttonarea {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    display: none;
+}
+
+/* 팝업되는 img 영역  */
+.buttonarea .notice {
+    background-color: rgb(179, 179, 179);
+    width: 1200px;
+    height: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 팝업 끄기 버튼 디자인  */
+.buttonarea #close {
+    padding: 8px 12px;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    border: 2px dotted rgb(255, 255, 255);
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 15px;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    cursor: pointer;
+}
+
+
+
+
+/* ----------------------- */
+h1 {
+    width: 200px;
+    height: 80px;
+    background-color: #ffffff;
+}
+
+#menu_open,
+#menu_close {
+    position: absolute;
+    top: 80px;
+    left: 92.5%;
+    width: 40px;
+    height: 50px;
+    cursor: pointer;
+    color: black;
+}
+
+.menu_btn_line1 {
+    width: 30px;
+    height: 3px;
+    background: #ff9d00;
+    transition: all 0.5s;
+    transform: rotate(0deg);
+    display: block;
+    margin: 6px 0;
+}
+
+.menu_btn_line2 {
+    width: 20px;
+    height: 3px;
+    background: #ff9d00;
+    transition: all 0.5s;
+    transform: rotate(0deg);
+    display: block;
+    margin: 6px 0;
+    margin-left: 20%;
+}
+
+.menu_btn_line3 {
+    width: 30px;
+    height: 3px;
+    background: #ff9d00;
+    transition: all 0.5s;
+    transform: rotate(0deg);
+    display: block;
+    margin: 6px 0;
+}
+
+#hamburgerarea {
+    padding-right: 100px;
+    padding-top: 20px;
+    background-color: rgb(255, 255, 255);
+    width: 100px;
+    height: 80px;
+    float: right;
+}
+
+#hamburgerarea p {
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    padding-right: 5px;
+    float: right;
+}
+
+/* 팝업관련 */
+.pop {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    display: none;
+    cursor: pointer;
+}
+
+.pop .popWrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pop .popWrap img {
+    width: 100%;
+    height: 100%;
+}
+
+.pop .popWrap button {
+    padding: 10px 15px;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 15px;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    cursor: pointer;
+}
+
+body,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: block;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+#section0 {
+    /* 전체영역  */
+    width: 100%;
+    height: 150px;
+}
+
+#section2 .category {
+    font-size: 18px;
+    position: absolute;
+}
+
+#section2 .category ul li a:hover {
+    color: #fafafa;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.buttoncontainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+#banner0 {
+    /* 내부 영역 */
+    margin: 0 auto;
+    padding-top: 60px;
+    box-sizing: border-box;
+    width: 1200px;
+    height: 100px;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+#banner0>ul {
+    width: 790px;
+    height: 154px;
+    margin: 0 auto;
+}
+
+#bannerWrap {
+    width: 1000px;
+    height: 80px;
+
+    float: left;
+}
+
+#bannerWrap>ul {
+    /* 메인메뉴부분  */
+    margin-left: 90px;
+    margin-top: 5px;
+}
+
+#bannerWrap>ul>li {
+    /* 메인 메뉴 안에 리스트  */
+    float: left;
+    margin: 15px;
+    position: relative;
+}
+
+#bannerWrap>ul>li>a {
+    /* 메인 메뉴 글씨  */
+    display: block;
+    color: grey;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#bannerWrap ul ul {
+    /* 서브메뉴 내려오는부분 */
+    /* 서브메뉴 ABSOLUTE */
+    z-index: 50;
+    display: none;
+    position: absolute;
+    top: 34px;
+    width: 90px;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.188);
+    border: 1px solid black;
+    text-decoration: none;
+}
+
+#bannerWrap ul ul a {
+    display: block;
+    padding: 0;
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    line-height: 2.5;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+/* 메뉴 보이게 */
+#bannerWrap>ul>li:hover ul {
+    display: block;
+}
+
+/* 메인 메뉴밑 강조  */
+#bannerWrap ul a:hover {
+    border-bottom: 4px solid orange;
+}
+
+/* 
+#bannerWrap ul ul a:hover {
+background:skyblue;
+} */
+
+#banner1 {
+    width: 1200px;
+    height: 310px;
+    margin: 0 auto;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+}
+
+
+slide_stopwrap {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    left: 50px;
+
+    ;
+}
+
+.slide_stop {
+    position: absolute;
+    z-index: 3;
+    width: 50px;
+    height: 50px;
+    top: 266px;
+    left: 250px;
+    right: 0px;
+}
+
+.slide_stop ul {
+    position: absolute;
+    right: 0;
+
+}
+
+.slide_stop li.sd_stop {
+    background: url(../images/main_img/slide_stop.png) no-repeat right center;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.slide_stop li.sd_start {
+    background: url(../images/main_img/slide_play.png) no-repeat right center;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    display: none;
+    cursor: pointer;
+
+}
+
+.slide_stop li a {
+    text-indent: -9999px;
+    display: block;
+}
+
+.swiper-container {
+    width: 545px;
+    height: 280px;
+    background: #ffffff;
+    top: -20px;
+    left: 0px;
+    border: 1px solid #666;
+    border-radius: 30px;
+    align-items: center;
+}
+
+.swiper-wrapper {
+    width: 545px;
+    height: 290px;
+}
+
+.swiper-slide {
+    top: 20px;
+    left: 545px;
+    width: 545px;
+    height: 290px;
+    text-align: center;
+    font-size: 18px;
+    /*     z-index: 0.1; */
+    /* Center slide text vertically */
+    /*   display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex; */
+    /* 내용을 중앙정렬 하기위해 flex 사용 */
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    /* 좌우 기준 중앙정렬 */
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    /* 위아래 기준 중앙정렬 */
+    align-items: center;
+}
+
+.paginationdesign {
+    position: relative;
+    top: -160px;
+    
+}
+
+.paginationdesign .swiper-pagination {
+    position: absolute;
+    top: 100px;
+    left: 250px;
+   
+}
+
+
+#banner1 .boxes img {
+    border: 1px solid #666;
+    border-radius: 30px;
+    position: absolute;
+    top: -20px;
+    left: 0;
+}
+
+.box1 {
+    position: absolute;
+    top: 42px;
+    left: 0px;
+    float: left;
+}
+
+.box2 {
+    position: absolute;
+    top: 20px;
+    left: 52%;
+    float: right;
+}
+
+/* 여기패딩은 더이상 만지면 안됨  */
+#banner2 {
+    background-color: #ffffff;
+    width: 1280px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.banner2 .boxes3 {
+    width: 520px;
+    height: 400px;
+}
+
+.boxes3 {
+    padding-top: 32px;
+    padding-right: 40px;
+    background-color: rgb(255, 255, 255);
+    width: 620px;
+    height: 400px;
+    float: right;
+    box-sizing: border-box;
+}
+
+.boxes3 ul {
+    list-style: none;
+}
+
+.boxes3 ul li {
+    float: left;
+}
+
+.boxes3 ul li a:hover {
+    color: #ff9129;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.category2 .ads {
+    float: left;
+    margin-top: 20px;
+}
+
+.category2 .ads li {
+    padding: 30px;
+    float: left;
+    margin: 8px;
+    width: 200px;
+    height: 45px;
+    border: black 2px dotted;
+}
+
+.category2 .ads li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.category2 .ads li a:hover {
+    color: rgb(32, 32, 243);
+    transition: 0.3s;
+}
+
+.category2 ul>.grey a {
+    color: grey;
+    margin-left: 3px;
+}
+
+.category ul {
+    margin-left: 10px;
+}
+
+.category2 ul {
+    margin-left: 10px;
+}
+
+.category2 ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.category ul li {
+    float: left;
+    list-style: none;
+}
+
+.category ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.category2 {
+    float: left;
+}
+
+.category2 ul li a {
+    text-decoration: none;
+    font-style: bold;
+}
+
+.panels {
+    padding-left: 10px;
+    width: 600px;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+}
+
+.category input:nth-of-type(1)~.panels .contents,
+.category input:nth-of-type(2)~.panels .contents1,
+.category input:nth-of-type(3)~.panels .contents2 {
+    transition: all 0.3s;
+    display: none;
+    padding: 10px;
+    width: 500px;
+    height: 220px;
+}
+
+.category input:nth-of-type(1):checked~.panels .contents,
+.category input:nth-of-type(2):checked~.panels .contents1,
+.category input:nth-of-type(3):checked~.panels .contents2 {
+    transition: all 0.3s;
+    display: block;
+    padding: 10px;
+    width: 500px;
+    height: 220px;
+}
+
+.boxes2 {
+    padding-top: 35px;
+    padding-left: 30px;
+    padding-right: 40px;
+    width: 580px;
+    height: 300px;
+    float: left;
+    background-color: rgb(255, 255, 255);
+}
+
+.boxes2 .category ul li {
+    margin: 10px;
+}
+
+/* 라벨지 안쪽  */
+/* 알림채용이랑 버튼이랑 다 감싸고 있는 부분   */
+.boxes2 .category {
+    position: relative;
+    width: 550px;
+    height: 210px;
+    background-color: #ffffff;
+}
+
+.category label input {
+    font-size: 17px;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+}
+
+label {
+    cursor: pointer;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 120px;
+    margin-left: -15px;
+    background-color: rgb(255, 255, 255);
+}
+
+input {
+    opacity: 0;
+}
+
+input:checked+label {
+    font-weight: bold;
+    color: rgba(255, 153, 36, 0.879);
+    font-size: 20px;
+    border-bottom: 5px dotted rgb(119, 213, 230);
+}
+
+/* 탭메뉴 안의 내용  */
+.contents {
+    width: 530px;
+    height: 233px;
+    /* position: absolute; */
+    margin-top: 30px;
+    padding-top: 0px;
+    padding-left: -10px;
+    left: 100px;
+    top: 80px;
+    /*     clear: both;
+ */
+    border-top: grey solid 1px;
+    border-bottom: grey solid 1px;
+    background: #ffffff;
+}
+
+.contents1 {
+    width: 570px;
+    height: 233px;
+    /* position: absolute; */
+    margin-top: 30px;
+    padding-top: 5px;
+    padding-left: 0px;
+    left: 45px;
+    top: 85px;
+    clear: both;
+    border-top: grey solid 1px;
+    border-bottom: grey solid 1px;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+.contents2 {
+    width: 570px;
+    height: 233px;
+    /* position: absolute; */
+
+    left: 45px;
+    top: 85px;
+    clear: both;
+    border-top: grey solid 1px;
+    border-bottom: grey solid 1px;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+.contents span {
+    line-height: 1;
+    font-weight: bold;
+    color: black;
+    font-size: 14px;
+    padding-left: -5px;
+}
+
+.contents ul {
+    padding: 0;
+}
+
+.contents ul li {
+    list-style: none;
+}
+
+.contents ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: grey;
+}
+
+.contents ul li a:hover {
+    color: #ff9129;
+    transition: 0.3s;
+}
+
+#newbannerwrap {
+    overflow: hidden;
+    position: relative;
+    width: 1200px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+#newbanner {
+    position: relative;
+    width: 1200px;
+    height: 150px;
+}
+
+#newbanner div.box7 {
+    position: absolute;
+    left: 0;
+}
+
+#newbanner div.box8 {
+    position: absolute;
+    left: 100%;
+}
+
+#newbanner div.box9 {
+    position: absolute;
+    left: 200%;
+}
+
+#banner3 {
+    width: 1200px;
+    height: 280px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+
+    padding-top: 45px;
+    padding-bottom: 45px;
+    /*  padding-left: 30px;
+    padding-right: 30px; */
+    /*     margin-bottom: 40px;
+ */
+}
+
+/*   border: 1px solid rgb(255, 255, 255); */
+.box {
+    flex: 1;
+    text-align: center;
+    height: 300px;
+}
+
+.container .box4,
+.container .box5,
+.container .box6 {
+    height: 230px;
+    width: 600px;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.container .box4 img,
+.container .box5 img,
+.container .box6 img {
+    position: relative;
+    height: 230px;
+    width: 600px;
+}
+
+#logowrap {
+    margin-top: 0px;
+    width: 200px;
+    height: 80px;
+    background-color: hsl(0, 0%, 100%);
+    float: left;
+}
+
+#bannerWrap {
+    background-color: rgb(255, 255, 255);
+    float: left;
+}
+
+#bannerWrap>ul {
+    width: 600px;
+    height: 50px;
+    /*  overflow: hidden;      */
+    transition: height 0.3s;
+    display: inline-block;
+}
+
+#bannerWrap>ul>ul {
+    width: 100px;
+    height: 300px;
+}
+
+#bannerWrap>ul:hover {
+    height: 200px;
+
+}
+
+#banner {
+    padding-top: 10px;
+    padding-left: 30px;
+    width: 900px;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    text-align: center;
+}
+
+#profilewrap {
+    width: 152px;
+    height: 50px;
+    float: right;
+}
+
+#banner>a {
+    text-decoration: none;
+    margin: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+}
+
+footer {
+    clear: both;
+    width: 1280px;
+    height: 250px;
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto;
+    position: relative;
+}
+
+
+
+
+#logoflip {
+    position: relative;
+    width: 230px;
+    height: 80px;
+}
+
+.logowrap2 {
+    position: absolute;
+    z-index: 5;
+    width: 230px;
+    height: 80px;
+    left: 50%;
+    top: 50%;
+    margin: -40px 0 0 -115px;
+
+}
+
+.logowrap2 img {
+    width: 230px;
+    height: 80px;
+    border-radius: 30px;
+
+}
+
+.logowrap2flipped {
+    position: absolute;
+    z-index: 5;
+    width: 230px;
+    height: 80px;
+    left: 50%;
+    top: 0;
+    margin: -40px 0 0 -115px;
+
+
+}
+
+.logowrap2flipped img {
+    width: 230px;
+    height: 80px;
+    border-radius: 30px;
+
+}
+
+
+
+
+
+footer #footerwrap #logowrap2 {
+    float: left;
+}
+
+footer #footerwrap {
+    padding: 50px;
+    height: 140px;
+    width: 1200px;
+}
+
+footer #footerwrap #footerwrap2 {
+    height: 150px;
+    width: 800px;
+    float: left;
+}
+
+#footerwrap2 ul {
+    padding-top: 10px;
+    margin-left: 100px;
+}
+
+#footerwrap ul li {
+    float: left;
+    margin: 10px;
+}
+
+#footerwrap ul li:first-child a {
+    color: rgba(255, 0, 0, 0.696);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#footerwrap ul li a {
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.765);
+    text-decoration: none;
+    font-size: 15px;
+}
+
+#footerwrap ul li a:hover {
+    color: #ff8812e2;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+#footerwrap2 #textwrap {
+    clear: both;
+    margin-left: 110px;
+    font-size: 14px;
+}
+
+#logowrap3 ul {
+    clear: both;
+    float: right;
+}
+
+#buttonwrap {
+    width: 1280px;
+    background: blue;
+    float: left;
+}
+
+#box1 {
+    position: relative;
+    width: 600px;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+}
+
+#btnDown {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#btnDown::after {
+    position: absolute;
+    bottom: 10px;
+    /* 버튼 하단에서의 거리 */
+    right: 10px;
+    /* 버튼 우측에서의 거리 */
+    color: white;
+}
+
+.api{float: right;}

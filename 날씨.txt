@@ -1,0 +1,25 @@
+★참고사이트 : https://openweathermap.org/weather-data
+
+apiid: 
+
+id: 도시식별
+name: 도시이름
+feels_like : 체감온도
+temp : 현재온도
+temp_min: 최저온도
+temp_max: 최고온도
+pressure : 기압 
+humidity : 습도
+sea_level : 해수면
+grnd_level : 지상의 대기압
+lat         :   위도(latitude)
+lon        :  경도(longitude) 
+visibility : 가시거리
+wind.speed  : 바람속도 , wind.deg: 바람방향, wind.gust: 돌풍
+dt : 데이터 수신 시간
+country: 국가코드 kr
+sunrise: 일출시간
+sunset : 일몰시간
+timezone":32400    : KST 즉 한국이면 tm_gmtoff는 32400 값을 나타낸다. 즉 UTC 보다 32400초 (9시간) 늦다는 것이
+
+icon : 날씨아이콘
